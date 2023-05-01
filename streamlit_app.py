@@ -45,5 +45,8 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit load list:")
 streamlit.dataframe(my_data_rows)
 
-
+# key in your favorutie fruit
+add_fruit_to_the_list = streamlit.text_input('What fruit would you like?','Kiwi') 
+streamlit.write('Added: ', add_fruit_to_the_list) 
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('test'))"
 
