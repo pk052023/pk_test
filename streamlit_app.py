@@ -49,9 +49,9 @@ streamlit.stop()
 
 
 def get_fruit_load_list():
-   with my_cur = my_cnx.cursor() as my_cur:
-      my_cur.execute("SELECT * from fruit_load_list")
-      return my_cur.fetchall()
+    with my_cnx.cursor() as my_cur:
+         my_cur.execute("SELECT * from fruit_load_list")
+         return my_cur.fetchall()
    
 # Add a button to fetch fruits 
 if streamlit.button('Get fruit load list'):
